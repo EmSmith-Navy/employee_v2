@@ -21,10 +21,11 @@ router.get("/:id", (req, res) => {
   }
 });
 
-router.post("/", (req, res) => {
+router.post("/", (req, res) => {});
   const { name } = req.body;
   if (!name) {
     return res.status(400).send("Name is required");
   }
   const newEmployee = {
     id: employees.length ? employees[employees.length - 1].id + 1 : 1,
+  };
